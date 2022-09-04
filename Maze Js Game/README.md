@@ -4,3 +4,4 @@ A simple maze game:
 -for every succeful try you will ear 5 points and you will lose 10 if you do not.
 -click on s if you want to restart
 -you have one minute to finish the game
+-you can save your score by pressing on the save button

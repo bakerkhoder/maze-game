@@ -11,9 +11,22 @@ function myfunction(){
  var total_result=document.getElementsByTagName("h1")
  var incomeTicker=60;
  var username=prompt("Welcome to the maz game ,please enter your name")
+ var savebutton= document.createElement("button")
+ savebutton.innerText="SAVE"
+ document.body.appendChild(savebutton)
+ if(localStorage.getItem(username)){
+  score+=parseInt(localStorage.getItem(username))
+  console.log(score)
+ 
+ }
+ savebutton.addEventListener("click",()=>{
+  window.localStorage.setItem(username,score)
+ })
  boxes.forEach((box)=>{
  box.addEventListener("mouseover",()=>{
  
+  
+
  if(total_result[0].innerHTML=="game started"){ score-=10
      total_result[0].innerHTML="Hover over S to restart"
     textresult[0].innerHTML="YOU LOST"
@@ -48,8 +61,7 @@ console.log(score)}
  
  
    }
-   //shil you won hek\
-   //wa2if timer
+   
 
    /*
     cheating message
